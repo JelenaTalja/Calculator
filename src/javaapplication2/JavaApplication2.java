@@ -18,14 +18,28 @@ public class JavaApplication2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Integer number1,number2, sum;
+        Integer number1,number2,res;
+        String znak;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число: ");
         number1=scanner.nextInt();
         System.out.println("Введите второе число: ");
         number2=scanner.nextInt();
-        System.out.println("Сумма введёных чисел равна: "+number1+number2);
-        
+        System.out.println("Введите действие (+ или -): ");
+        znak=scanner.next();
+        switch (znak) {
+            case "+":
+                res=number1+number2;
+                break;
+                case "-":
+                res=number1-number2;
+                break;
+            default:
+                System.out.println("Вы не провильно ввели цифры: 0");
+                res=null;
+        }
+        if(res!=null)        
+        System.out.println("Равно: " +res);        
     }
     
 }
